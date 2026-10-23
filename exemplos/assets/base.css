@@ -1,0 +1,88 @@
+/* Base compartilhada dos exemplos de landing page do momikid. Tokens vêm de momikid/src/ui/theme.ts e docs/product/brand.md */
+:root{
+  --raspberry:#B83F57; --peach:#EE8A78; --ground:#FBF3EF; --tile:#FFF6F3; --ink:#2B1E2F;
+  --sub:#6E5B70; --soft:#FFD8CF; --soft-text:#A8324A; --violet:#4B3FB0; --violet-soft:#E7E2FF;
+  --green:#1D6B57; --green-soft:#C8EBDC; --blue:#2457A6; --blue-soft:#D3E3FF; --amber:#9F6C00; --amber-soft:#FFE9A8;
+  --line:rgba(43,30,47,.08); --shadow:0 10px 30px rgba(74,38,58,.10);
+  --f-logo:'Baloo 2',sans-serif; --f-display:'Bricolage Grotesque',sans-serif; --f-body:'Figtree',system-ui,sans-serif;
+  --bg:var(--ground); --text:var(--ink); --muted:var(--sub); --accent:var(--raspberry); --card:rgba(255,255,255,.72); --card-border:rgba(255,255,255,.9);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--f-body);background:var(--bg);color:var(--text);line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:var(--f-display);line-height:1.08;letter-spacing:-.02em;font-weight:800}
+.wrap{width:min(1120px,100% - 40px);margin-inline:auto}
+section{padding:96px 0;position:relative}
+.eyebrow{display:inline-block;font-weight:700;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+.lead{font-size:1.15rem;color:var(--muted);max-width:56ch}
+.center{text-align:center}.center .lead{margin-inline:auto}
+h2{font-size:clamp(2rem,4.2vw,3.1rem);margin-bottom:16px}
+
+/* marca */
+.brand{display:inline-flex;align-items:center}
+.brand svg{width:40px;height:40px;transform:translateY(-2px)}
+.wordmark{font-family:var(--f-logo);font-weight:800;font-size:1.9rem;letter-spacing:-.02em;margin-left:-4px;color:var(--ink)}
+.wordmark b{color:var(--raspberry);font-weight:800}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);background:color-mix(in srgb,var(--bg) 78%,transparent);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.nav ul{display:flex;gap:28px;list-style:none;font-weight:600;font-size:.95rem;color:var(--muted)}
+.nav ul a:hover{color:var(--accent)}
+@media(max-width:760px){.nav ul{display:none}}
+
+/* botões */
+.btn{display:inline-flex;align-items:center;gap:10px;height:56px;padding:0 26px;border-radius:20px;font-weight:700;font-size:1rem;border:0;cursor:pointer;transition:transform .15s,box-shadow .15s;font-family:var(--f-body)}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--accent);color:#fff;box-shadow:0 10px 24px color-mix(in srgb,var(--accent) 35%,transparent)}
+.btn-ghost{background:var(--card);color:var(--text);border:1px solid var(--card-border);box-shadow:var(--shadow)}
+.btn-sm{height:44px;padding:0 20px;border-radius:16px;font-size:.92rem}
+.store{display:inline-flex;align-items:center;gap:12px;padding:10px 20px;border-radius:18px;background:var(--ink);color:#fff;font-size:.72rem;line-height:1.15;opacity:.95}
+.store strong{display:block;font-size:1.05rem;font-family:var(--f-display)}
+.store svg{width:26px;height:26px;fill:#fff}
+.soon{font-size:.8rem;color:var(--muted);margin-top:14px}
+
+/* vidro */
+.glass{background:var(--card);border:1px solid var(--card-border);border-radius:28px;box-shadow:var(--shadow);backdrop-filter:blur(8px)}
+
+/* blobs */
+.blob{position:absolute;border-radius:50%;filter:blur(70px);pointer-events:none;z-index:0}
+.hero>.wrap,section>.wrap{position:relative;z-index:1}
+
+/* chips */
+.chip{display:inline-flex;align-items:center;gap:8px;padding:8px 16px;border-radius:999px;font-weight:600;font-size:.88rem;background:var(--soft);color:var(--soft-text)}
+.chip.v{background:var(--violet-soft);color:var(--violet)}.chip.g{background:var(--green-soft);color:var(--green)}.chip.b{background:var(--blue-soft);color:var(--blue)}.chip.a{background:var(--amber-soft);color:#6B4A00}
+
+/* celular */
+.phone{width:290px;aspect-ratio:9/18.6;background:#1c1520;border-radius:44px;padding:10px;box-shadow:0 40px 70px rgba(74,38,58,.28),0 0 0 2px #2d2331 inset;position:relative;flex:none}
+.phone::before{content:"";position:absolute;top:18px;left:50%;translate:-50% 0;width:84px;height:22px;border-radius:99px;background:#1c1520;z-index:3}
+.screen{width:100%;height:100%;border-radius:35px;overflow:hidden;background:var(--ground);padding:46px 16px 16px;display:flex;flex-direction:column;gap:11px;color:var(--ink);font-size:.78rem}
+.screen h4{font-family:var(--f-display);font-size:1.35rem;letter-spacing:-.02em;line-height:1.1}
+.screen small{color:var(--sub);font-size:.72rem}
+.s-head{display:flex;align-items:center;gap:8px}
+.s-head svg{width:26px;height:26px}
+.s-card{background:#fff;border-radius:18px;padding:11px 12px;box-shadow:0 6px 16px rgba(74,38,58,.07);display:flex;align-items:center;gap:10px}
+.s-ico{width:34px;height:34px;border-radius:11px;display:grid;place-items:center;font-size:1.05rem;flex:none}
+.s-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.s-btn{background:#fff;border-radius:16px;padding:10px 4px;text-align:center;font-weight:700;font-size:.68rem;box-shadow:0 6px 16px rgba(74,38,58,.07)}
+.s-btn i{display:block;font-style:normal;font-size:1.3rem;margin-bottom:2px}
+.s-row b{display:block;font-size:.8rem}
+.s-row small{display:block}
+.s-time{margin-left:auto;font-weight:700;color:var(--sub);font-size:.7rem}
+.s-nav{margin-top:auto;display:flex;justify-content:space-around;background:#fff;border-radius:20px;padding:9px;font-size:1.05rem;box-shadow:0 6px 16px rgba(74,38,58,.07)}
+.s-nav .on{background:var(--soft);border-radius:12px;padding:2px 12px}
+
+/* rodapé */
+footer{padding:48px 0 40px;border-top:1px solid var(--line);font-size:.88rem;color:var(--muted)}
+footer .wrap{display:flex;flex-direction:column;gap:18px}
+.foot-top{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+.disclaimer{font-size:.8rem;max-width:80ch;opacity:.85}
+
+/* revelar ao rolar */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+@keyframes float{50%{transform:translateY(-12px)}}
+@keyframes pulse{50%{opacity:.4}}

@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>momikid — o caderno da família</title>
+<meta name="description" content="Mamadas, sono, remédios, vacinas e agenda dos seus filhos, juntos e em tempo real com quem cuida.">
+<link rel="icon" href="assets/logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@800&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/base.css">
+<style>
+.hero{padding:72px 0 110px;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(2.6rem,6vw,4.6rem);margin:18px 0 22px}
+.hero h1 em{font-style:normal;color:var(--raspberry);position:relative;white-space:nowrap}
+.hero h1 em::after{content:"";position:absolute;left:0;right:0;bottom:.04em;height:.22em;background:var(--peach);opacity:.45;border-radius:99px;z-index:-1}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap;margin:34px 0 8px}
+.hero-art{position:relative;display:flex;justify-content:center;min-height:560px}
+.hero-art .phone{animation:float 7s ease-in-out infinite}
+.float-card{position:absolute;padding:12px 16px;display:flex;align-items:center;gap:12px;font-size:.85rem;border-radius:20px;z-index:4}
+.float-card b{display:block;font-family:var(--f-display)}
+.float-card small{color:var(--sub)}
+.fc1{left:-70px;top:40px}.fc2{right:-6px;bottom:120px}
+.proof{display:flex;gap:26px;flex-wrap:wrap;margin-top:28px;font-size:.9rem;color:var(--sub);font-weight:600}
+.proof span::before{content:"✓ ";color:var(--green)}
+
+.features{background:linear-gradient(#FFF6F3,#FBF3EF)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:56px}
+.feat{padding:30px 28px;transition:transform .25s}
+.feat:hover{transform:translateY(-6px)}
+.feat .ic{width:56px;height:56px;border-radius:18px;display:grid;place-items:center;font-size:1.7rem;margin-bottom:20px}
+.feat h3{font-size:1.35rem;margin-bottom:8px}
+.feat p{color:var(--sub);font-size:.98rem}
+
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:56px;counter-reset:s}
+.step{position:relative;padding-top:12px}
+.step::before{counter-increment:s;content:counter(s);font-family:var(--f-display);font-weight:800;font-size:5rem;line-height:1;color:var(--soft);display:block;margin-bottom:6px}
+.step h3{font-size:1.3rem;margin-bottom:8px}.step p{color:var(--sub)}
+
+.live{background:var(--violet);color:#fff;border-radius:48px;margin:0 20px;overflow:hidden}
+.live .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;padding-block:20px}
+.live .eyebrow{color:#C9C0FF}.live .lead{color:#DAD4FF}
+.live ul{list-style:none;margin-top:28px;display:grid;gap:14px}
+.live li{display:flex;gap:12px;font-weight:600}
+.live li::before{content:"✓";flex:none;width:26px;height:26px;border-radius:50%;background:rgba(255,255,255,.18);display:grid;place-items:center;font-size:.85rem}
+.people{display:grid;gap:14px}
+.person{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);border-radius:24px;padding:16px 18px;display:flex;align-items:center;gap:14px}
+.av{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;font-size:1.3rem;flex:none}
+.person b{display:block}.person small{color:#CFC8FF}
+.person .t{margin-left:auto;font-size:.8rem;color:#CFC8FF;font-weight:700}
+.dot{width:9px;height:9px;border-radius:50%;background:#7CF0B5;display:inline-block;margin-right:6px;animation:pulse 1.6s infinite}
+
+.final{text-align:center}
+.final .box{padding:72px 28px;background:linear-gradient(135deg,#FFD8CF,#FFE9E2);border-radius:44px;position:relative;overflow:hidden}
+.final .box>svg{position:absolute;width:260px;right:-40px;bottom:-60px;opacity:.18}
+.final h2{font-size:clamp(2.2rem,5vw,3.6rem)}
+.final .cta-row{justify-content:center}
+
+@media(max-width:900px){
+  .hero .wrap,.live .wrap{grid-template-columns:1fr}
+  .grid,.steps{grid-template-columns:1fr}
+  .hero-art{min-height:auto;margin-top:30px}.fc1{left:0}.fc2{right:0}
+  section{padding:68px 0}.live{margin:0 10px;border-radius:32px}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav"><div class="wrap">
+  <a href="#" class="brand" aria-label="momikid">
+    <svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="40" cy="31" r="14" fill="#B83F57"/><circle cx="63" cy="55" r="10.5" fill="#EE8A78"/><path d="M22 50C24 78 58 88 78 66" fill="none" stroke="#B83F57" stroke-width="13" stroke-linecap="round"/></svg>
+    <span class="wordmark">momi<b>kid</b></span>
+  </a>
+  <ul><li><a href="#recursos">Recursos</a></li><li><a href="#como">Como funciona</a></li><li><a href="#familia">Família</a></li></ul>
+  <a href="#baixar" class="btn btn-primary btn-sm">Quero testar</a>
+</div></nav>
+
+<header class="hero">
+  <div class="blob" style="width:480px;height:480px;background:#FFD8CF;left:-160px;top:-100px;opacity:.8"></div>
+  <div class="blob" style="width:420px;height:420px;background:#E7E2FF;right:-120px;top:120px;opacity:.9"></div>
+  <div class="wrap">
+    <div>
+      <span class="chip">👶 Para mães, pais, avós e babás</span>
+      <h1>O caderno da família, <em>sempre à mão.</em></h1>
+      <p class="lead">Mamadas, sono, fraldas, remédios, vacinas e agenda dos seus filhos num só lugar — e todo mundo que cuida vê tudo em tempo real.</p>
+      <div class="cta-row" id="baixar">
+        <a href="#" class="btn btn-primary">Quero participar do beta</a>
+        <a href="#recursos" class="btn btn-ghost">Ver o que tem dentro</a>
+      </div>
+      <p class="soon">Android e iOS · em português, inglês e espanhol</p>
+      <div class="proof"><span>Registro com um toque</span><span>Vários cuidadores</span><span>Modo noturno</span></div>
+    </div>
+    <div class="hero-art">
+      <div class="glass float-card fc1"><div class="s-ico" style="background:#C8EBDC">💉</div><div><b>Vacina em 3 dias</b><small>Calendário do PNI</small></div></div>
+      <div class="phone"><div class="screen">
+        <div class="s-head"><svg viewBox="0 0 100 100"><circle cx="40" cy="31" r="14" fill="#B83F57"/><circle cx="63" cy="55" r="10.5" fill="#B83F57"/><path d="M22 50C24 78 58 88 78 66" fill="none" stroke="#B83F57" stroke-width="13" stroke-linecap="round"/></svg><h4>Hoje</h4></div>
+        <small>Sábado, 24 · Mel, 5 meses</small>
+        <div class="s-grid">
+          <div class="s-btn"><i>🤱</i>Peito</div><div class="s-btn"><i>🍼</i>Mamadeira</div><div class="s-btn"><i>😴</i>Sono</div>
+          <div class="s-btn"><i>💧</i>Xixi</div><div class="s-btn"><i>💩</i>Cocô</div><div class="s-btn"><i>💊</i>Remédio</div>
+        </div>
+        <div class="s-card"><div class="s-ico" style="background:#FFD8CF">🤱</div><div class="s-row"><b>Mamou · lado esquerdo</b><small>por Mamãe · 14 min</small></div><span class="s-time">09:40</span></div>
+        <div class="s-card"><div class="s-ico" style="background:#E7E2FF">😴</div><div class="s-row"><b>Soneca</b><small>por Vovó · 1h20</small></div><span class="s-time">08:10</span></div>
+        <div class="s-card"><div class="s-ico" style="background:#C8EBDC">💧</div><div class="s-row"><b>Fralda</b><small>por Papai</small></div><span class="s-time">07:35</span></div>
+        <div class="s-nav"><span class="on">🏠</span><span>❤️</span><span>📅</span><span>📸</span><span>👨‍👩‍👧</span></div>
+      </div></div>
+      <div class="glass float-card fc2"><div class="s-ico" style="background:#E7E2FF">👵</div><div><b>Vovó registrou a soneca</b><small>agora mesmo</small></div></div>
+    </div>
+  </div>
+</header>
+
+<section class="features" id="recursos">
+  <div class="wrap">
+    <div class="center rv"><span class="eyebrow">Tudo no mesmo lugar</span><h2>Feito para a rotina real de quem cuida</h2><p class="lead">Do recém-nascido à idade escolar, sem planilha, sem grupo de WhatsApp para perguntar “quando foi o último remédio?”.</p></div>
+    <div class="grid">
+      <article class="glass feat rv"><div class="ic" style="background:#FFD8CF">🍼</div><h3>Registro com um toque</h3><p>Peito, mamadeira, sono, fralda e remédio. Cronômetro de mamada por lado e linha do dia sempre atualizada.</p></article>
+      <article class="glass feat rv"><div class="ic" style="background:#C8EBDC">💊</div><h3>Remédios sem dose dupla</h3><p>Horários, próximas doses e um aviso quando alguém da família já deu o remédio.</p></article>
+      <article class="glass feat rv"><div class="ic" style="background:#D3E3FF">💉</div><h3>Vacinas e crescimento</h3><p>Calendário vacinal do PNI e curvas de crescimento da OMS para acompanhar peso e altura.</p></article>
+      <article class="glass feat rv"><div class="ic" style="background:#FFE9A8">🩺</div><h3>Relatório para o pediatra</h3><p>Sintomas, remédios e ficha de emergência prontos para levar à consulta, em PDF.</p></article>
+      <article class="glass feat rv"><div class="ic" style="background:#E7E2FF">📅</div><h3>Agenda da família</h3><p>Consultas, escola e compromissos, com quem leva e quem busca. Sincroniza com o calendário do celular.</p></article>
+      <article class="glass feat rv"><div class="ic" style="background:#FFD6E6">⭐</div><h3>Tarefas, estrelas e marcos</h3><p>Quadro de tarefas para os maiores e um álbum de marcos para guardar cada primeira vez.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="como">
+  <div class="wrap">
+    <div class="center rv"><span class="eyebrow">Como funciona</span><h2>Pronto em poucos minutos</h2></div>
+    <div class="steps">
+      <div class="step rv"><h3>Crie a família</h3><p>Cadastre seu filho ou filha e comece a registrar o dia.</p></div>
+      <div class="step rv"><h3>Convide quem cuida</h3><p>Mande um link para o pai, a avó ou a babá. Cada um entra no seu idioma.</p></div>
+      <div class="step rv"><h3>Registre e acompanhe</h3><p>Tudo sincroniza na hora. Ninguém precisa perguntar, está no momikid.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0" id="familia">
+  <div class="live"><div class="wrap" style="padding-block:72px">
+    <div class="rv">
+      <span class="eyebrow">Em tempo real</span>
+      <h2>Todo mundo na mesma página</h2>
+      <p class="lead">Quem cuida de manhã passa o bastão sem mensagem comprida. O que um registra, os outros veem na hora.</p>
+      <ul><li>Cuidadores com papéis diferentes</li><li>Guarda compartilhada, avós e babás</li><li>Cada pessoa usa o app e recebe avisos no seu idioma</li></ul>
+    </div>
+    <div class="people rv">
+      <div class="person"><div class="av" style="background:#FFD8CF">👩</div><div><b>Mamãe</b><small><span class="dot"></span>Registrou a mamada</small></div><span class="t">09:40</span></div>
+      <div class="person"><div class="av" style="background:#C8EBDC">👨</div><div><b>Papai</b><small>Trocou a fralda</small></div><span class="t">07:35</span></div>
+      <div class="person"><div class="av" style="background:#FFE9A8">👵</div><div><b>Vovó</b><small><span class="dot"></span>Soneca em andamento</small></div><span class="t">agora</span></div>
+    </div>
+  </div></div>
+</section>
+
+<section class="final">
+  <div class="wrap"><div class="box rv">
+    <svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="40" cy="31" r="13" fill="#B83F57"/><circle cx="63" cy="55" r="9.5" fill="#B83F57"/><path d="M22 50C24 78 58 88 78 66" fill="none" stroke="#B83F57" stroke-width="11" stroke-linecap="round"/></svg>
+    <h2>Menos preocupação,<br>mais tempo com eles.</h2>
+    <p class="lead">Entre na lista e seja uma das primeiras famílias a testar o momikid.</p>
+    <div class="cta-row"><a href="#" class="btn btn-primary">Quero participar do beta</a></div>
+    <p class="soon">Lançamento inicial no Brasil.</p>
+  </div></div>
+</section>
+
+<footer><div class="wrap">
+  <div class="foot-top"><a href="#" class="brand"><svg viewBox="0 0 100 100" style="width:32px;height:32px"><circle cx="40" cy="31" r="14" fill="#B83F57"/><circle cx="63" cy="55" r="10.5" fill="#EE8A78"/><path d="M22 50C24 78 58 88 78 66" fill="none" stroke="#B83F57" stroke-width="13" stroke-linecap="round"/></svg><span class="wordmark" style="font-size:1.5rem">momi<b>kid</b></span></a><span>© 2026 momikid · Privacidade · Termos</span></div>
+  <p class="disclaimer">O momikid registra e organiza o que a família anota. Não faz diagnóstico nem substitui a orientação do pediatra ou de outro profissional de saúde. Em caso de emergência, procure atendimento.</p>
+</div></footer>
+<script src="assets/reveal.js"></script>
+</body>
+</html>
