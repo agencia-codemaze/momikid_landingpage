@@ -4,12 +4,12 @@
  * "/" é o português (padrão, x-default); /en/ e /es/ são as versões em inglês e espanhol.
  */
 export const PATHS = {
-  pt: { home: '/', privacy: '/privacidade/', terms: '/termos/' },
-  en: { home: '/en/', privacy: '/en/privacy/', terms: '/en/terms/' },
-  es: { home: '/es/', privacy: '/es/privacidad/', terms: '/es/terminos/' },
+  pt: { home: '/', privacy: '/privacidade/', terms: '/termos/', deletion: '/excluir-conta/' },
+  en: { home: '/en/', privacy: '/en/privacy/', terms: '/en/terms/', deletion: '/en/delete-account/' },
+  es: { home: '/es/', privacy: '/es/privacidad/', terms: '/es/terminos/', deletion: '/es/eliminar-cuenta/' },
 };
 
-export const PAGES = ['home', 'privacy', 'terms'];
+export const PAGES = ['home', 'privacy', 'terms', 'deletion'];
 export const LOCALES = { pt: 'pt-BR', en: 'en', es: 'es' };
 export const OG_LOCALES = { pt: 'pt_BR', en: 'en_US', es: 'es_ES' };
 

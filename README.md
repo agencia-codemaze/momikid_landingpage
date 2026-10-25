@@ -28,9 +28,9 @@ O Dockerfile compila o React e serve o `dist/` com nginx sem root (`nginx.conf`:
 
 `exemplos/` guarda as primeiras direções em HTML estático, só para referência; não entra na imagem.
 
-## Política de Privacidade e Termos de Uso
+## Política de Privacidade, Termos de Uso e exclusão da conta
 
-Endereços fixos, para informar nas lojas: `/privacidade` e `/termos` (`?lang=en` ou `?lang=es` força o idioma). Os textos estão em `src/legalContent.js`, nos três idiomas, e **são um rascunho**: tudo que aparece em amarelo na página (`{{...}}` no código) precisa ser preenchido e o texto revisado por um advogado. Depois disso, troque `LEGAL_DRAFT` para `false` nesse arquivo para tirar o aviso de rascunho.
+Endereços fixos, para informar nas lojas: `/privacidade`, `/termos` e `/excluir-conta` (instruções de exclusão da conta e dos dados, pedidas pelo Google Play e pela Meta no login com Facebook; em inglês `/en/delete-account`, em espanhol `/es/eliminar-cuenta`) (`?lang=en` ou `?lang=es` força o idioma). Os textos estão em `src/legalContent.js`, nos três idiomas, e **são um rascunho**: tudo que aparece em amarelo na página (`{{...}}` no código) precisa ser preenchido e o texto revisado por um advogado. Depois disso, troque `LEGAL_DRAFT` para `false` nesse arquivo para tirar o aviso de rascunho.
 
 ## Fotos de famílias
 

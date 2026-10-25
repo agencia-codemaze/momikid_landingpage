@@ -19,7 +19,10 @@ function Rich({ text }) {
 
 const slug = (i) => `s${i + 1}`;
 
-/** doc: 'privacy' | 'terms'. Endereços: /privacidade e /termos (as lojas pedem um link fixo). */
+/**
+ * doc: 'privacy' | 'terms' | 'deletion'. Endereços: /privacidade, /termos e /excluir-conta (as lojas e a Meta pedem
+ * um link fixo; a de exclusão é a que o Google Play e o login com Facebook exigem).
+ */
 export default function Legal({ doc }) {
   const { lang } = useLang();
   const text = LEGAL[lang];

@@ -64,7 +64,7 @@ export const DICT = {
       chips: [['Mamou · lado esquerdo', 'registrado em 2 segundos'], ['Vacina em dia', 'um toque e pronto'], ['Papai viu na hora', 'sem precisar perguntar']],
     },
     final: { title1: 'Menos preocupação,', title2: 'mais tempo com eles.', lead: 'Baixe o momikid e leve a rotina da sua família no bolso.' },
-    footer: { privacy: 'Privacidade', terms: 'Termos', disclaimer: 'O momikid registra e organiza o que a família anota. Não faz diagnóstico nem substitui a orientação do pediatra ou de outro profissional de saúde. Em caso de emergência, procure atendimento.' },
+    footer: { privacy: 'Privacidade', terms: 'Termos', deletion: 'Excluir conta', disclaimer: 'O momikid registra e organiza o que a família anota. Não faz diagnóstico nem substitui a orientação do pediatra ou de outro profissional de saúde. Em caso de emergência, procure atendimento.' },
     phone: {
       today: 'Hoje', live: 'ao vivo', child: 'Mel, 5 meses',
       quick: ['Peito', 'Mamadeira', 'Sono', 'Xixi', 'Cocô', 'Remédio'],
@@ -133,7 +133,7 @@ export const DICT = {
       chips: [['Fed · left side', 'logged in 2 seconds'], ['Vaccine up to date', 'one tap and done'], ['Dad saw it instantly', 'no need to ask']],
     },
     final: { title1: 'Less worry,', title2: 'more time with them.', lead: 'Get momikid and carry your family’s routine in your pocket.' },
-    footer: { privacy: 'Privacy', terms: 'Terms', disclaimer: 'momikid records and organizes what the family logs. It does not diagnose and does not replace the advice of a pediatrician or other health professional. In an emergency, seek care.' },
+    footer: { privacy: 'Privacy', terms: 'Terms', deletion: 'Delete account', disclaimer: 'momikid records and organizes what the family logs. It does not diagnose and does not replace the advice of a pediatrician or other health professional. In an emergency, seek care.' },
     phone: {
       today: 'Today', live: 'live', child: 'Mel, 5 months',
       quick: ['Breast', 'Bottle', 'Sleep', 'Pee', 'Poop', 'Medicine'],
@@ -202,7 +202,7 @@ export const DICT = {
       chips: [['Tomó · lado izquierdo', 'registrado en 2 segundos'], ['Vacuna al día', 'un toque y listo'], ['Papá lo vio al instante', 'sin tener que preguntar']],
     },
     final: { title1: 'Menos preocupación,', title2: 'más tiempo con ellos.', lead: 'Descarga momikid y lleva la rutina de tu familia en el bolsillo.' },
-    footer: { privacy: 'Privacidad', terms: 'Términos', disclaimer: 'momikid registra y organiza lo que la familia anota. No hace diagnósticos ni reemplaza la orientación del pediatra u otro profesional de la salud. En caso de emergencia, busca atención.' },
+    footer: { privacy: 'Privacidad', terms: 'Términos', deletion: 'Eliminar cuenta', disclaimer: 'momikid registra y organiza lo que la familia anota. No hace diagnósticos ni reemplaza la orientación del pediatra u otro profesional de la salud. En caso de emergencia, busca atención.' },
     phone: {
       today: 'Hoy', live: 'en vivo', child: 'Mel, 5 meses',
       quick: ['Pecho', 'Biberón', 'Sueño', 'Pipí', 'Caca', 'Medicina'],

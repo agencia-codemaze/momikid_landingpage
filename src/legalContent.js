@@ -1,5 +1,5 @@
 /**
- * Textos da Política de Privacidade e dos Termos de Uso (pt, en, es).
+ * Textos da Política de Privacidade, dos Termos de Uso e da página de exclusão da conta (pt, en, es).
  *
  * RASCUNHO que descreve o que o app faz hoje e deixa em {{lacunas}} o que só o responsável e o jurídico podem
  * definir (quem é o controlador, encarregado, prazos, país do servidor, foro). Cada {{...}} aparece destacado na
@@ -165,6 +165,55 @@ export const LEGAL = {
         { h: 'Contato', p: ['Dúvidas sobre estes Termos: {{e-mail de contato}}.'] },
       ],
     },
+    deletion: {
+      title: 'Excluir a conta',
+      version: '{{versão, ex.: 1.0}}', since: '{{data de início da vigência}}',
+      summary: [
+        'Você pode excluir a sua conta do momikid a qualquer momento, pelo próprio app. A exclusão é imediata e não pode ser desfeita.',
+        'As famílias em que você é a única pessoa são excluídas junto, com as crianças, os registros e as fotos.',
+        'Nas famílias com outras pessoas, você sai, e o que você registrou continua com a família, sem o seu nome.',
+        'Se não conseguir entrar no app, peça a exclusão por e-mail.',
+      ],
+      sections: [
+        { h: 'Como excluir pelo app', ul: [
+          'Abra o momikid e entre na sua conta.',
+          'Toque em “Excluir minha conta”. O link fica na aba Família, em Meu perfil e, se você ainda não tem família, na tela de criar ou entrar em uma.',
+          'Confira o que vai acontecer com cada uma das suas famílias.',
+          'Digite EXCLUIR e toque em “Excluir minha conta para sempre”.',
+        ] },
+        { h: 'O que é apagado', ul: [
+          'Sua conta e seu login, seu nome e sua foto de perfil.',
+          'Seus amigos, bloqueios e os eventos compartilhados com você.',
+          'O registro dos seus aceites dos termos e dos consentimentos.',
+          'As famílias em que você é a única pessoa, com as crianças, todos os registros e as fotos.',
+          'As preferências guardadas no aparelho. A sessão é encerrada.',
+        ] },
+        { h: 'O que continua', ul: [
+          'Nas famílias com outras pessoas, o que você registrou continua com a família, sem o seu nome, e as fotos que você enviou ficam com ela.',
+          'Os eventos que você copiou para o calendário do celular continuam lá. Se quiser, apague-os pelo app de calendário.',
+          'Relatórios em PDF e fichas de emergência que você já enviou a outras pessoas ficam com quem os recebeu.',
+        ] },
+        { h: 'Se você é o único administrador', p: [
+          'Se você é o único administrador de uma família que tem outros membros, o app pede que, antes, você torne outro membro administrador ou remova os demais. Assim a família não fica sem ninguém para administrá-la.',
+        ] },
+        { h: 'Sem acesso ao app', p: [
+          'Se você não consegue entrar no app, escreva para {{e-mail de privacidade}} a partir do e-mail da sua conta, com o assunto “Excluir minha conta”. Podemos pedir uma confirmação para ter certeza de que o pedido é seu. A exclusão segue as regras desta página e é feita em até {{prazo para atender o pedido}}.',
+        ] },
+        { h: 'Se você entrou com Google, Apple ou Facebook', p: [
+          'Excluir a conta apaga os seus dados no momikid. Você também pode tirar o acesso do momikid na conta do provedor:',
+        ], ul: [
+          'Facebook: Configurações e privacidade > Configurações > Apps e sites > momikid > Remover.',
+          'Google: em myaccount.google.com/connections, escolha momikid e remova o acesso.',
+          'Apple: no iPhone, Ajustes > [seu nome] > Iniciar sessão com a Apple > momikid > Parar de usar.',
+        ], p2: [
+          'Remover o acesso só no provedor não apaga os dados no momikid. Para isso, exclua a conta pelo app ou peça por e-mail.',
+        ] },
+        { h: 'Cópias de segurança', p: [
+          'Fazemos cópias de segurança diárias do servidor. Os dados excluídos saem delas quando as cópias são substituídas, em até {{prazo das cópias de segurança}}. Podemos manter o mínimo exigido por lei, pelo prazo que ela determinar.',
+        ] },
+        { h: 'Contato', p: ['Dúvidas sobre a exclusão: {{e-mail de privacidade}}.'] },
+      ],
+    },
   },
 
   en: {
@@ -322,6 +371,55 @@ export const LEGAL = {
         { h: 'Contact', p: ['Questions about these Terms: {{contact e-mail}}.'] },
       ],
     },
+    deletion: {
+      title: 'Delete your account',
+      version: '{{version, e.g. 1.0}}', since: '{{effective date}}',
+      summary: [
+        'You can delete your momikid account at any time, right in the app. Deletion is immediate and cannot be undone.',
+        'Families where you are the only person are deleted too, along with the children, records and photos.',
+        'In families with other people, you leave, and what you recorded stays with the family, without your name.',
+        'If you cannot sign in to the app, request deletion by e-mail.',
+      ],
+      sections: [
+        { h: 'How to delete it in the app', ul: [
+          'Open momikid and sign in to your account.',
+          'Tap “Delete my account”. The link is on the Family tab, in My profile and, if you do not have a family yet, on the screen to create or join one.',
+          'Check what will happen to each of your families.',
+          'Type DELETE and tap “Delete my account forever”.',
+        ] },
+        { h: 'What gets deleted', ul: [
+          'Your account and sign-in, your name and your profile photo.',
+          'Your friends, blocks and the events shared with you.',
+          'The record of your acceptance of the terms and of your consents.',
+          'Families where you are the only person, along with the children, all records and the photos.',
+          'The preferences saved on the device. You are signed out.',
+        ] },
+        { h: 'What stays', ul: [
+          'In families with other people, what you recorded stays with the family, without your name, and the photos you uploaded stay with it.',
+          'Events you copied to your phone’s calendar stay there. If you want, delete them in the calendar app.',
+          'PDF reports and emergency cards you already sent to other people stay with whoever received them.',
+        ] },
+        { h: 'If you are the only admin', p: [
+          'If you are the only admin of a family that has other members, the app asks you to first make another member an admin or remove the other members. That way the family is not left without anyone to manage it.',
+        ] },
+        { h: 'Without access to the app', p: [
+          'If you cannot sign in to the app, write to {{privacy e-mail}} from your account’s e-mail address, with the subject “Delete my account”. We may ask for confirmation to make sure the request is yours. Deletion follows the rules on this page and is done within {{period to handle the request}}.',
+        ] },
+        { h: 'If you signed in with Google, Apple or Facebook', p: [
+          'Deleting your account deletes your data in momikid. You can also remove momikid’s access in your provider account:',
+        ], ul: [
+          'Facebook: Settings & privacy > Settings > Apps and websites > momikid > Remove.',
+          'Google: at myaccount.google.com/connections, choose momikid and remove access.',
+          'Apple: on your iPhone, Settings > [your name] > Sign in with Apple > momikid > Stop Using.',
+        ], p2: [
+          'Removing access only at the provider does not delete your data in momikid. To do that, delete your account in the app or request it by e-mail.',
+        ] },
+        { h: 'Backups', p: [
+          'We make daily backups of the server. Deleted data leaves them as the backups are overwritten, within {{backup period}}. We may keep the minimum required by law for the period it sets.',
+        ] },
+        { h: 'Contact', p: ['Questions about deletion: {{privacy e-mail}}.'] },
+      ],
+    },
   },
 
   es: {
@@ -477,6 +575,55 @@ export const LEGAL = {
           'Estos Términos se rigen por las leyes de Brasil. Se elige el fuero de {{circunscripción judicial}}, sin perjuicio del derecho del consumidor de demandar ante los tribunales de su domicilio, cuando la ley así lo garantice. Si usas la app en otro país, los derechos que te reconozca la ley local siguen vigentes. {{REVISIÓN JURÍDICA: confirmar para los países de lanzamiento}}',
         ] },
         { h: 'Contacto', p: ['Dudas sobre estos Términos: {{correo de contacto}}.'] },
+      ],
+    },
+    deletion: {
+      title: 'Eliminar la cuenta',
+      version: '{{versión, p. ej. 1.0}}', since: '{{fecha de inicio de vigencia}}',
+      summary: [
+        'Puedes eliminar tu cuenta de momikid en cualquier momento, desde la propia app. La eliminación es inmediata y no se puede deshacer.',
+        'Las familias en las que eres la única persona se eliminan también, con los niños, los registros y las fotos.',
+        'En las familias con otras personas, sales, y lo que registraste se queda en la familia, sin tu nombre.',
+        'Si no puedes entrar en la app, pide la eliminación por correo.',
+      ],
+      sections: [
+        { h: 'Cómo eliminarla desde la app', ul: [
+          'Abre momikid e inicia sesión en tu cuenta.',
+          'Toca “Eliminar mi cuenta”. El enlace está en la pestaña Familia, en Mi perfil y, si aún no tienes familia, en la pantalla para crear una o unirte a una.',
+          'Revisa qué va a pasar con cada una de tus familias.',
+          'Escribe ELIMINAR y toca “Eliminar mi cuenta para siempre”.',
+        ] },
+        { h: 'Qué se elimina', ul: [
+          'Tu cuenta y tu acceso, tu nombre y tu foto de perfil.',
+          'Tus amigos, tus bloqueos y los eventos compartidos contigo.',
+          'El registro de tu aceptación de los términos y de tus consentimientos.',
+          'Las familias en las que eres la única persona, con los niños, todos los registros y las fotos.',
+          'Las preferencias guardadas en el dispositivo. Se cierra la sesión.',
+        ] },
+        { h: 'Qué se conserva', ul: [
+          'En las familias con otras personas, lo que registraste se queda en la familia, sin tu nombre, y las fotos que subiste se quedan con ella.',
+          'Los eventos que copiaste al calendario del teléfono siguen ahí. Si quieres, bórralos desde la app de calendario.',
+          'Los informes en PDF y las fichas de emergencia que ya enviaste a otras personas se quedan con quien los recibió.',
+        ] },
+        { h: 'Si eres el único administrador', p: [
+          'Si eres el único administrador de una familia que tiene otros miembros, la app te pide que antes hagas administrador a otro miembro o quites a los demás. Así la familia no se queda sin nadie que la administre.',
+        ] },
+        { h: 'Sin acceso a la app', p: [
+          'Si no puedes entrar en la app, escribe a {{correo de privacidad}} desde el correo de tu cuenta, con el asunto “Eliminar mi cuenta”. Podemos pedirte una confirmación para asegurarnos de que la solicitud es tuya. La eliminación sigue las reglas de esta página y se hace en un plazo de {{plazo para atender la solicitud}}.',
+        ] },
+        { h: 'Si entraste con Google, Apple o Facebook', p: [
+          'Eliminar la cuenta borra tus datos en momikid. También puedes quitarle el acceso a momikid en tu cuenta del proveedor:',
+        ], ul: [
+          'Facebook: Configuración y privacidad > Configuración > Apps y sitios web > momikid > Eliminar.',
+          'Google: en myaccount.google.com/connections, elige momikid y quita el acceso.',
+          'Apple: en el iPhone, Ajustes > [tu nombre] > Iniciar sesión con Apple > momikid > Dejar de usar.',
+        ], p2: [
+          'Quitar el acceso solo en el proveedor no borra tus datos en momikid. Para eso, elimina la cuenta desde la app o pídelo por correo.',
+        ] },
+        { h: 'Copias de seguridad', p: [
+          'Hacemos copias de seguridad diarias del servidor. Los datos eliminados salen de ellas a medida que las copias se sustituyen, en un máximo de {{plazo de las copias de seguridad}}. Podemos conservar lo mínimo exigido por ley, durante el plazo que ella determine.',
+        ] },
+        { h: 'Contacto', p: ['Dudas sobre la eliminación: {{correo de privacidad}}.'] },
       ],
     },
   },
